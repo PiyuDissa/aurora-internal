@@ -1,0 +1,35 @@
+body {
+	@include body-1;
+}
+h1 {
+	@include title-one;
+}
+h2 {
+	@include title-two;
+}
+h3 {
+	@include title-three;
+}
+h4 {
+	@include title-four;
+}
+h5 {
+	@include title-five;
+}
+h6 {
+	@include title-six;
+}
+b,
+strong {
+	font-weight: $font-weight-bold;
+}
+a {
+	@include anchor;
+}
+p,
+li {
+	em,
+	i {
+		font-weight: $font-weight-medium;
+	}
+}

@@ -1,0 +1,14 @@
+// icon sprit common
+@mixin icon-sprite {
+	background-image: url($icon-sprite);
+	background-repeat: no-repeat;
+	background-size: 250px 250px;
+}
+
+// separate mixins
+@mixin custom-icon {
+	@include icon-sprite;
+	width: 12px;
+	height: 12px;
+	background-position: -45px -6px;
+}

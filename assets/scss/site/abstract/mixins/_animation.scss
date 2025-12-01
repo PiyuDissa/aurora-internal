@@ -1,0 +1,8 @@
+@keyframes custom-anim {
+	0% {
+		transform: translateX(-30px);
+	}
+	100% {
+		transform: translateX(calc(-100% - 50px));
+	}
+}

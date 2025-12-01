@@ -1,0 +1,169 @@
+@mixin title-one {
+	@include media-breakpoint-up(lg) {
+		@include font-size($h1-font-size);
+	}
+	font-size: 30px;
+	font-weight: $font-weight-medium;
+	line-height: 1.15;
+}
+@mixin title-two {
+	@include media-breakpoint-up(lg) {
+		@include font-size($h2-font-size);
+	}
+	font-size: 30px;
+	font-weight: $font-weight-medium;
+	line-height: 1.15;
+}
+@mixin title-three {
+	@include media-breakpoint-up(lg) {
+		@include font-size($h3-font-size);
+	}
+	font-size: 30px;
+	font-weight: $font-weight-medium;
+	line-height: 1.15;
+}
+@mixin title-four {
+	@include font-size($h4-font-size);
+	font-weight: $font-weight-medium;
+	line-height: 1.15;
+}
+@mixin title-five {
+	@include font-size($h5-font-size);
+	font-weight: $font-weight-medium;
+	line-height: 1.15;
+}
+@mixin title-six {
+	@include font-size($h6-font-size);
+	font-weight: $font-weight-medium;
+	line-height: 1.15;
+}
+@mixin body-1 {
+	@include media-breakpoint-up(lg) {
+		font-size: $font-size-base;
+	}
+	font-size: $font-size-sm;
+	line-height: 1.5;
+}
+@mixin body-2 {
+	font-size: $font-size-sm;
+	line-height: 1.5;
+}
+@mixin button-1 {
+	font-size: 18px;
+	font-weight: $font-weight-bold;
+	line-height: 1.16;
+}
+@mixin button-2 {
+	font-size: $font-size-sm;
+	font-weight: $font-weight-medium;
+	line-height: 1.1875;
+}
+@mixin menu-1 {
+	font-size: $font-size-sm;
+	font-weight: $font-weight-medium;
+	line-height: 1.1875;
+}
+@mixin menu-2 {
+	font-size: $font-size-xs;
+	font-weight: $font-weight-medium;
+	line-height: 1.14;
+}
+@mixin notification {
+	font-size: $font-size-base;
+	font-weight: $font-weight-medium;
+	line-height: 1.15;
+}
+@mixin highlight-1 {
+	font-size: $font-size-lg;
+	font-weight: $font-weight-medium;
+	line-height: 1.15;
+}
+@mixin tag-1 {
+	font-size: 18px;
+	font-weight: $font-weight-medium;
+	line-height: 1.15;
+}
+@mixin tab-1 {
+	font-size: 18px;
+	font-weight: $font-weight-bold;
+	line-height: 1.16;
+}
+@mixin cta-text-1 {
+	@include media-breakpoint-up(lg) {
+		font-size: $h2-font-size;
+	}
+	font-size: 30px;
+	font-weight: $font-weight-bold;
+	line-height: 1.15;
+}
+@mixin stat-1 {
+	font-size: $h3-font-size;
+	font-weight: $font-weight-bold;
+	line-height: 1.15;
+}
+@mixin stat-2 {
+	font-size: $h1-font-size;
+	font-weight: $font-weight-bold;
+	line-height: 1.15;
+}
+@mixin name-1 {
+	@include media-breakpoint-up(lg) {
+		font-size: $font-size-base;
+	}
+	font-size: $font-size-xs;
+	font-weight: $font-weight-medium;
+	line-height: 1.15;
+}
+@mixin designation-1 {
+	@include media-breakpoint-up(lg) {
+		font-size: $font-size-sm;
+	}
+	font-size: $font-size-xxs;
+	line-height: 1.5;
+}
+@mixin quote-1 {
+	font-size: $font-size-lg;
+	line-height: 1.5;
+}
+@mixin date-1 {
+	font-size: $font-size-xs;
+	font-weight: $font-weight-normal;
+	line-height: 1.5;
+}
+@mixin date-2 {
+	font-size: $font-size-base;
+	line-height: 1.15;
+}
+@mixin anchor {
+	@include media-breakpoint-up(lg) {
+		transition: color 0.3s ease-in-out;
+		&:hover {
+			color: var(--blue);
+		}
+	}
+	color: var(--lava);
+	font-weight: $font-weight-medium;
+	text-decoration-line: underline;
+}
+@mixin eyebrow {
+	@include media-breakpoint-up(lg) {
+		font-size: $font-size-base;
+	}
+	font-size: $h6-font-size;
+	font-weight: $font-weight-bold;
+	line-height: 1.15;
+}
+@mixin eyebrow-with-bg {
+	@include media-breakpoint-up(lg) {
+		padding: 6px 20px;
+		font-size: $h5-font-size;
+	}
+	width: fit-content;
+	padding: 7px 15px 6px;
+	border-radius: 33px;
+	background-color: var(--mint);
+	font-size: 12px;
+	font-weight: $font-weight-medium;
+	line-height: 1.15;
+	vertical-align: top;
+}

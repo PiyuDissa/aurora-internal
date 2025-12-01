@@ -1,0 +1,216 @@
+@mixin common-button-with-arrow(
+	$bg-color,
+	$title-color,
+	$border-size,
+	$border-color,
+	$hover-bg-color,
+	$hover-title-color,
+	$hover-border-color
+) {
+	@include media-breakpoint-up(lg) {
+		&:hover {
+			.e-btn__link {
+				border-color: $hover-border-color;
+				background-color: $hover-bg-color;
+				color: $hover-title-color;
+				&::after {
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+	width: fit-content;
+	cursor: pointer;
+	.e-btn__link {
+		@include button-1;
+		position: relative;
+		display: flex;
+		min-width: initial;
+		min-height: initial;
+		align-items: center;
+		justify-content: center;
+		padding: 15px 17px 15px 18px;
+		border: $border-size solid $border-color;
+		border-radius: 5px;
+		margin: 0;
+		background-color: $bg-color;
+		color: $title-color;
+		gap: 10px;
+		line-height: normal;
+		text-decoration: none;
+		transition: 0.3s ease-in-out;
+		&::after {
+			@include up-right-arrow-blue;
+			flex: 0 0 12px;
+			content: "";
+			transition: transform 0.3s ease-in-out;
+		}
+		p {
+			margin-bottom: 0;
+			text-decoration: none;
+		}
+	}
+}
+@mixin common-button-small(
+	$bg-color,
+	$title-color,
+	$border-size,
+	$border-color,
+	$hover-bg-color,
+	$hover-title-color,
+	$hover-border-color
+) {
+	@include media-breakpoint-up(lg) {
+		&:hover {
+			.e-btn__link {
+				border-color: $hover-border-color;
+				background-color: $hover-bg-color;
+				color: $hover-title-color;
+			}
+		}
+	}
+	width: fit-content;
+	cursor: pointer;
+	.e-btn__link {
+		@include button-2;
+		position: relative;
+		display: flex;
+		min-width: initial;
+		min-height: initial;
+		align-items: center;
+		justify-content: center;
+		padding: 9px 15px;
+		border: $border-size solid $border-color;
+		border-radius: 5px;
+		margin: 0;
+		background-color: $bg-color;
+		color: $title-color;
+		gap: 20px;
+		line-height: normal;
+		text-decoration: none;
+		transition: 0.3s ease-in-out;
+		p {
+			margin-bottom: 0;
+			text-decoration: none;
+		}
+	}
+}
+@mixin common-link(
+	$title-color,
+	$hover-title-color,
+) {
+	@include media-breakpoint-up(lg) {
+		&:hover {
+			.e-btn__link,
+			a:not(.e-lnk),
+			.btn {
+				color: $hover-title-color;
+				&::after {
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+	width: fit-content;
+	cursor: pointer;
+	.e-btn__link,
+	a:not(.e-lnk),
+	.btn {
+		@include button-1;
+		position: relative;
+		display: flex;
+		min-width: initial;
+		min-height: initial;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+		color: $title-color;
+		gap: 10px;
+		line-height: normal;
+		text-decoration: none;
+		transition: 0.3s ease-in-out;
+		// stylelint-disable-next-line no-descending-specificity
+		p {
+			margin-bottom: 0;
+			text-decoration: none;
+		}
+		&:not(:has(.e-spn)) {
+			&::after {
+				@include up-right-arrow-blue;
+				content: "";
+				transition: transform 0.3s ease-in-out;
+			}
+		}
+	}
+}
+
+//Button & Links
+@mixin white-outline-button-small {
+	@include common-button-small(var(--transparent), var(--pure-white), 1px, var(--pure-white), var(--pure-white), var(--lava), var(--pure-white));
+}
+@mixin white-outline-button-with-arrow {
+	@include common-button-with-arrow(var(--transparent), var(--pure-white), 1px, var(--pure-white), var(--pure-white), var(--lava), var(--pure-white));
+}
+@mixin white-outline-lava-hover-button-with-arrow {
+	@include common-button-with-arrow(var(--lava), var(--pure-white), 1px, var(--pure-white), var(--pure-white), var(--lava), var(--pure-white));
+}
+@mixin lava-outline-button-with-arrow {
+	@include common-button-with-arrow(var(--transparent), var(--lava), 1px, var(--lava), var(--lava), var(--pure-white), var(--lava));
+}
+@mixin lava-fill-button {
+	@include common-button-with-arrow(var(--lava), var(--pure-white), 1px, var(--pure-black), var(--transparent), var(--pure-white), var(--pure-white));
+	@include media-breakpoint-up(lg) {
+		&:hover {
+			.e-btn__link {
+				&::after {
+					filter: brightness(0) invert(1);
+				}
+			}
+		}
+	}
+}
+@mixin white-fill-button {
+	@include common-button-with-arrow(var(--pure-white), var(--lava), 1px, var(--pure-white), var(--transparent), var(--pure-white), var(--pure-white));
+	@include media-breakpoint-up(lg) {
+		&:hover {
+			.e-btn__link {
+				&::after {
+					filter: brightness(0) invert(1);
+				}
+			}
+		}
+	}
+}
+@mixin white-fill-lava-hover-button {
+	@include common-button-with-arrow(var(--pure-white), var(--lava), 1px, var(--pure-white), var(--lava), var(--pure-white), var(--pure-white));
+	@include media-breakpoint-up(lg) {
+		&:hover {
+			.e-btn__link {
+				&::after {
+					filter: brightness(0) invert(1);
+				}
+			}
+		}
+	}
+}
+@mixin lava-link-with-arrow {
+	@include common-link(var(--lava), var(--blue));
+}
+@mixin lava-outline-button-with-next-button {
+	@include common-button-with-arrow(var(--transparent), var(--lava), 1px, var(--lava), var(--lava), var(--pure-white), var(--lava));
+	@include media-breakpoint-up(lg) {
+		&:hover {
+			.e-btn__link {
+				&::after {
+					transform: translateX(3px);
+				}
+			}
+		}
+	}
+	.e-btn__link {
+		&::after {
+			@include next-button;
+			flex: 0 0 9px;
+		}
+	}
+}

@@ -1,0 +1,52 @@
+/* stylelint-disable */
+/* USE THIS $colors SASS MAP TO ADD WORDPRESS BACKEND COLOR-PALETTE COLORS */
+
+$colors: (
+	/* Use single quotation marks for color names */
+	/* Need to run 'npm run ng' after adding new colors */
+	"gonzo-violet": #6b00df,
+	"invasive-indigo": #410082,
+	"blue":#00B4C9,
+	"lava": #323C46,
+	"mint": #A8FFD4,
+	"sun": #FFE500,
+	"pumpkin-pie": #e69f58,
+	"electric": #7AEBEA,
+	"greyish": #F5F5F6,
+	"bubbles": #EBFCFC,
+	"pure-white": #fff,
+	"pure-black": #000,
+	"transparent": transparent,
+	"custom-red-1": #e76868,
+	"white-opacity-60": rgb(255 255 255 / 60%),
+	"checkbox-grey": #ffffff26,
+	"custom-grey-1": #323c4626,
+	"electric-5": rgba(122, 235, 234, 0.5),
+	"lava-15": rgba(50, 60, 70, 0.15),
+	"midnight-express": #323C46,
+	"lava-25": rgba(50, 60, 70, 0.25),
+	"footer-form-border": rgba(255, 255, 255, 0.15),
+	"blue-45": rgba(0, 180, 201, 0.45)
+);
+
+$theme-colors: (
+	primary: #00B4C9,
+	secondary: #323C46,
+	pure-black: #000,
+	pure-white: #fff
+);
+
+/* GUTENBERG COLOR-PALETTE DEFAULT CLASSES OVERRIDE WITH NEW COLORS */
+
+/* stylelint-disable declaration-no-important */
+:root {
+	@each $key, $value in $colors {
+		.has-#{$key}-color {
+			color: #{$value} !important;
+		}
+		.has-#{$key}-background-color {
+			background-color: #{$value} !important;
+		}
+	}
+}
+/* stylelint-enable declaration-no-important */
